@@ -4,12 +4,13 @@ import model.BurgerSale;
 
 import java.io.Serializable;
 
-//Must implements Serializable  for our Beans when using MVC
+//Must implements Serializable for our Beans(main java class) when using MVC
 public class Burger implements Serializable {
 
     // properties for bun, pickles, numPatties, Cheese
     //properties all need to be private when implementing MVC structure to our code
 
+    private long id;
     private String burgerName;
     private int numBuns; // 3 for big mac, etc
     private int numPickles;
@@ -20,10 +21,10 @@ public class Burger implements Serializable {
 //    private List<Ingredient> ingredients;
 
     //there must default constructors while using MVC because java can reserve space and memory for this object
-    public Burger(){}
+    public Burger() {}
 
     // constructor
-    public Burger(String burgerName, int numberBuns, int numberPickles, int numberPatties, boolean hasCheese) {
+    public Burger(long id,String burgerName, int numberBuns, int numberPickles, int numberPatties, boolean hasCheese) {
         // set each of the local class properties, to the arguments passed into this constructor
         this.burgerName = burgerName;
         this.numBuns = numberBuns;
@@ -59,6 +60,13 @@ public class Burger implements Serializable {
     // }
 
     // ctrl - enter (to get the menu where you can create getters/setters)
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public int getNumBuns() {
         return numBuns;
