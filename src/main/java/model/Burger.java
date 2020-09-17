@@ -1,7 +1,5 @@
 package model;
 
-import model.BurgerSale;
-
 import java.io.Serializable;
 
 //Must implements Serializable for our Beans(main java class) when using MVC
@@ -42,22 +40,6 @@ public class Burger implements Serializable {
         this.burgerName = burgerName;
     }
 
-
-    @Override
-    public String burgerHasCheese() {
-        if (this.cheese) {
-            return "This " + this.burgerName + " has cheese.";
-        } else {
-            return "This " + this.burgerName + " sadly has no cheese.";
-        }
-    }
-
-    // public Burger(int numBuns, int numPickles, int numPatties, boolean cheese) {
-    //     this.numBuns = numBuns;
-    //     this.numPickles = numPickles;
-    //     this.numPatties = numPatties;
-    //     this.cheese = cheese;
-    // }
 
     // ctrl - enter (to get the menu where you can create getters/setters)
     public long getId() {
