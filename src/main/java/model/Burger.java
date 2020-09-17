@@ -24,7 +24,7 @@ public class Burger implements Serializable {
     public Burger() {}
 
     // constructor
-    public Burger(long id,String burgerName, int numberBuns, int numberPickles, int numberPatties, boolean hasCheese) {
+    public Burger(String burgerName, int numberBuns, int numberPickles, int numberPatties, boolean hasCheese) {
         // set each of the local class properties, to the arguments passed into this constructor
         this.burgerName = burgerName;
         this.numBuns = numberBuns;
