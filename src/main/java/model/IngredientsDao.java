@@ -5,7 +5,7 @@ import java.util.List;
 
 public class IngredientsDao implements Ingredients {
 
-    //    Create a temporary list, to hold the ingredients as they are created
+    //    Create a variable storage, to hold the  all the ingredients as they are created
     private List<Ingredient> ingredients = new ArrayList<>();
 
 

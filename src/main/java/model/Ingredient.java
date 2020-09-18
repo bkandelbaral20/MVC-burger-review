@@ -1,12 +1,14 @@
 package model;
 
+import java.io.Serializable;
+
 //we want this class  to represent a burger ingredient
-public class Ingredient {
+public class Ingredient implements Serializable {
     // TODO: Create all properties, with correct access type (public/protected/private)
     //    1. long id
     private long id;
     // 2. string name
-    private String ingredientName;
+    private String name;
     // 3. int quantity
     private int quantity;
 
@@ -15,8 +17,8 @@ public class Ingredient {
     }
 
     // TODO: Create a constructor with all properties except the ID
-    public Ingredient(String ingredientName, int quantity) {
-        this.ingredientName = ingredientName;
+    public Ingredient(String name, int quantity) {
+        this.name = name;
         this.quantity = quantity;
     }
 
@@ -32,11 +34,11 @@ public class Ingredient {
     }
 
     public String getIngredientName() {
-        return ingredientName;
+        return name;
     }
 
-    public void setIngredientName(String ingredientName) {
-        this.ingredientName = ingredientName;
+    public void setIngredientName(String name) {
+        this.name = name;
     }
 
     public int getQuantity() {
