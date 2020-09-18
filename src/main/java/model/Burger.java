@@ -1,6 +1,7 @@
 package model;
 
 import java.io.Serializable;
+import java.util.List;
 
 //Must implements Serializable for our Beans(main java class) when using MVC
 public class Burger implements Serializable {
@@ -10,25 +11,23 @@ public class Burger implements Serializable {
 
     private long id;
     private String burgerName;
-    private int numBuns; // 3 for big mac, etc
-    private int numPickles;
-    private int numPatties;
-    private boolean cheese; // true or
+//    private int numBuns; // 3 for big mac, etc
+//    private int numPickles;
+//    private int numPatties;
+//    private boolean cheese; // true or
 
     //Segment the condiments out into their own Bean(i.e public class Ingredient)
-//    private List<Ingredient> ingredients;
+    private List<Ingredient> ingredients;
 
     //there must default constructors while using MVC because java can reserve space and memory for this object
     public Burger() {}
 
     // constructor
-    public Burger(String burgerName, int numberBuns, int numberPickles, int numberPatties, boolean hasCheese) {
+    public Burger(String burgerName,List<Ingredient> ingredients ) {
         // set each of the local class properties, to the arguments passed into this constructor
         this.burgerName = burgerName;
-        this.numBuns = numberBuns;
-        this.numPickles = numberPickles;
-        numPatties = numberPatties;
-        cheese = hasCheese;
+        this.ingredients = ingredients;
+
     }
 
 //    getters and setters
@@ -50,35 +49,12 @@ public class Burger implements Serializable {
         this.id = id;
     }
 
-    public int getNumBuns() {
-        return numBuns;
+    public List<Ingredient> getIngredients() {
+        return ingredients;
     }
 
-    public void setNumBuns(int numBuns) {
-        this.numBuns = numBuns;
+    public void setIngredients(List<Ingredient> ingredients) {
+        this.ingredients = ingredients;
     }
-
-    public int getNumPickles() {
-        return numPickles;
-    }
-
-    public void setNumPickles(int numPickles) {
-        this.numPickles = numPickles;
-    }
-
-    public int getNumPatties() {
-        return numPatties;
-    }
-
-    public void setNumPatties(int numPatties) {
-        this.numPatties = numPatties;
-    }
-
-    public boolean isCheese() {
-        return cheese;
-    }
-
-    public void setCheese(boolean cheese) {
-        this.cheese = cheese;
-    }
+//
 }

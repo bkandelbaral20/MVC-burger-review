@@ -1,6 +1,6 @@
 import java.util.HashMap;
 import model.Burger;
-import model.DaoFactory;
+import model.DaoFactoryI;
 
 public class Assessment {
     // Have a Burger Class - properties of condiments - print out a statement about deliciousness factor
@@ -9,8 +9,8 @@ public class Assessment {
     public static void main(String[] args) {
 
 //        showing the connection of the DaoFactory to all of our other model stuff
-        //lets say we wante dto find the burger with ID 5
-        Burger burgerFive = DaoFactory.getBurgersDao().findById(5L);
+        //lets say we want dto find the burger with ID 5
+        Burger burgerFive = DaoFactoryI.getBurgersDao().findById(5L);
         // test making a burger
         Burger bigMac = new Burger("Big Mac", 3, 7, 2, true);
 
@@ -19,7 +19,7 @@ public class Assessment {
         // Make a hash map of burgers where the key => value relationship is 'burgerName' => Burger()
         HashMap<String, Burger> theBurgers = new HashMap<>();
         theBurgers.put(bigMac.getBurgerName(), bigMac);
-        theBurgers.put(homestyle.getBurgerName(), homestyle);
+//        theBurgers.put(homestyle.getBurgerName(), homestyle);
 
         // Here is a visual representation of what's IN the hash map
         // [
